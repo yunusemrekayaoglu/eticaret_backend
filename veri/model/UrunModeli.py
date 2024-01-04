@@ -2,7 +2,8 @@ from sqlalchemy.orm import mapped_column, Mapped, relationship
 
 from veri.model.TemelVeriSinifi import TemelVeriSinifi
 
-
+#urun modelini yedim
+#urun modelinin icinde kodu, adi, fiyati, ....,
 class UrunModeli(TemelVeriSinifi):
     __tablename__ = "urun"
 

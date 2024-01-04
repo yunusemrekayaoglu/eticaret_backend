@@ -1,7 +1,8 @@
 from flask import Flask
+from flask_cors import CORS
 from flask_migrate import Migrate
 
-from blueprints import api_bp, genel_bp
+from blueprints import api_bp
 from veri import *
 
 
@@ -11,6 +12,9 @@ def create_app():
     migrate = Migrate()
     db.init_app(app)
     migrate.init_app(app, db)
+
+    CORS(app)
+
 
     @app.route('/')
     def index():

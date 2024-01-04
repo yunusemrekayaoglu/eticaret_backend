@@ -6,6 +6,14 @@ from veri import db
 
 
 def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
+
+    """
+
+    :param veri_sinifi:
+    :param bp_adi:
+    :return:
+    """
+
     bp = Blueprint(bp_adi, __name__)
     @bp.route('/', methods=['GET'])
     @bp.route('', methods=['GET'])
@@ -19,7 +27,7 @@ def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
 
         cevap = db.session.scalars(sorgu).all()
 
-        return [veri_sinifi.to_dict() for veri in cevap]
+        return [veri_sinifi.to_dict() for veri_sinifi in cevap]
 
     @bp.route('/', methods=['POST'])
     @bp.route('', methods=['POST'])
