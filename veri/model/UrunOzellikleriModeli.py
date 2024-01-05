@@ -22,7 +22,7 @@ class UrunOzellikleriModeli(TemelVeriSinifi):
     """
     __tablename__ = "urun_ozellik"
 
-    urun_id: Mapped[int] = mapped_column(ForeignKey('magaza.id'))
+    urun_id: Mapped[int] = mapped_column(ForeignKey('urun.id'))
     ozellik:Mapped[str] = mapped_column(nullable=False)
     deger:Mapped[float] = mapped_column(nullable=False) #alış ile satış arasındaki kâr
 
