@@ -5,52 +5,70 @@ from sqlalchemy import Select, inspect
 
 def sorgula(sorgu:Select, veri_sinifi: type,  sayfa_no: int = 0, kayit_sayisi: int = 10):
     """
-    Sorgula Fonksiyonu
-    :param sorgu:
-    :param veri_sinifi:
-    :param sayfa_no:
-    :param kayit_sayisi:
-    :return:
+Sorgula Fonksiyonu
+==================
+    Sorgula fonksiyonu, sayfadan gelen isteğe göre işlemleri gerçekleştirir.
 
-    Sorgula fonksiyonu içerisinde sayfadan gelen isteğe göre işlemleri yaptığımız yerdir.
+    Örnek::
 
-    Örnek;
+        http://127.0.0.1:5000/api/v1/urun?sirala=ar_id
 
-    http://127.0.0.1:5000/api/v1/urun?sirala=ar_id
-    burada görmüş olduğumuz '?sirala=ar_id' bize id'ye göre artan şekilde sırala demektir. (gerekli kısaltmalar bu sayfanın sonunda mevcuttur.)
+    Bu örnekte ``?sirala=ar_id`` bize ID'ye göre artan şekilde sırala anlamına gelir.
+    (Gerekli kısaltmalar bu sayfanın sonunda mevcuttur.)
+
+Kullanılan Kısaltmalar ve Anlamları
+-----------------------------------
+
+1. **sirala**
+   Sıralama işlemleri burada yapılır.
+
+   ``az_``: Azalan şekilde sıralar.
+
+   ``ar_``: Artan şekilde sıralar.
 
 
 
-    Kullanılan Kısaltmalar ve Anlamları:
+2. **f**
+   Filtreleme işlemleri bu aşamada yapılır.
 
-    1. sirala
-    Sıralama işlemleri burada yapılacaktır.
-    -> az_ ------------------------ azalan şekilde sıralayacaktır.
-    -> ar_ ------------------------ artan şekilde sıralayacaktır.
+   - *Sayısal filtreleme işlemleri*
 
-    2. f
-    Filtreleme işlemleri bu aşamada yapılacaktır.
-    -> sayısal filtreleme işlemleri --------------------
-    '~'   -> sağındaki ve solundaki sayı arasında olanlara göre filtrele.
-    '>'   -> verilen sayıdan büyük olanlara göre filtrele.
-    '>='  -> verilen sayıdan büyük veya eşit olanlara göre filtrele.
-    '<'   -> verilen sayıdan küçüklere göre filtrele.
-    '<='  -> verilen sayıdan küçük veya eşit olanlara göre filtrele.
-    '='   -> verilen sayıya eşit olanlara göre filtrele.
+   ``~``: Sağındaki ve solundaki sayı arasında olanlara göre filtreler.
 
-    -> metinsel filtreleme işlemleri ---------------------
-    '|='  -> verilen metinden sonra olanlara göre filtrele.
-    '=|'  -> verilen metinden önceki olanlara göre filtrele.
-    '|=|' -> verilen metin içinde olanlara göre filtrele.
-    '!='  -> verilen metin içindekilerle başlayana göre filtrele.
-    '=!'  -> verilen metin içindekilerle bitene göre filtrele.
-    '!=!' -> verilen metin içindekilerle aynı olanlara göre filtrele.
+   ``>``: Verilen sayıdan büyük olanlara göre filtreler.
 
-    -> tarihsel filtreleme işlemleri -------------------
-    '.='  -> verilen tarihten başlayacak şekilde filtrele.
-    '=.'  -> verilen tarihte bitecek şekilde filtrele.
-    '.=.' -> verilen tarihler aralığında olacak şekilde filtrele.
-    '.==' -> verilen tarihe eşit olacak şekilde filtrele.
+    ``>=``: Verilen sayıdan büyük veya eşit olanlara göre filtreler.
+
+    ``<``: Verilen sayıdan küçüklere göre filtreler.
+
+    ``<=``: Verilen sayıdan küçük veya eşit olanlara göre filtreler.
+
+    ``=``: Verilen sayıya eşit olanlara göre filtreler.
+
+   - *Metinsel filtreleme işlemleri*
+
+    ``|=``: Verilen metinden sonra olanlara göre filtreler.
+
+    ``=|``: Verilen metinden önceki olanlara göre filtreler.
+
+    ``|=|``: Verilen metin içinde olanlara göre filtreler.
+
+    ``!=``: Verilen metin içindekilerle başlayana göre filtreler.
+
+    ``=!``: Verilen metin içindekilerle bitene göre filtreler.
+
+    ``!=!``: Verilen metin içindekilerle aynı olanlara göre filtreler.
+
+   - *Tarihsel filtreleme işlemleri*
+
+    ``.=``: Verilen tarihten başlayacak şekilde filtreler.
+
+    ``=.``: Verilen tarihte bitecek şekilde filtreler.
+
+    ``.=.``: Verilen tarihler aralığında olacak şekilde filtreler.
+
+    ``.==``: Verilen tarihe eşit olacak şekilde filtreler.
+
     """
 
 

@@ -7,6 +7,26 @@ from veri.model.TemelVeriSinifi import TemelVeriSinifi
 
 
 class UrunAlisModeli(TemelVeriSinifi):
+    """
+    Ürün Alış Modeli.
+
+    :cvar __tablename__: Veritabanındaki tablo adı: "alis_hareketleri"
+    :type __tablename__: str
+
+    :cvar urun_id: Alış hareketinin bağlı olduğu ürün ID'si
+    :type urun_id: Mapped[int]
+
+    :cvar miktar: Alınan ürün miktarı
+    :type miktar: Mapped[float]
+
+    :cvar birim_fiyat: Birim fiyat
+    :type birim_fiyat: Mapped[float]
+
+    :cvar tarih: Alış tarihi
+    :type tarih: Mapped[date]
+    """
+
+
     __tablename__ = "alis_hareketleri"
 
     urun_id:Mapped[int] = mapped_column(ForeignKey('urun.id'))

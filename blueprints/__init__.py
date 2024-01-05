@@ -4,6 +4,16 @@ from blueprints.genelBP import genel_bp
 from veri import MagazaModeli, MusteriModeli, SiparisModeli, SiparisUrunModeli, UrunAlisModeli, UrunSatisModeli, \
     UrunKategoriModeli, UrunModeli, UrunOzellikleriModeli, UrunYorumModeli
 
+
+"""
+
+Buraya blueprintleri ekliyoruz.
+Blueprintlerin url prefixlerini belirliyoruz.
+Blueprintlerin içine veri tabanı modelini ve blueprint adını gönderiyoruz.
+Blueprintlerin içindeki fonksiyonlar veri tabanı modeli ile ilgili kayıtları getirir, ekler, düzenler ve siler.
+"""
+
+
 v1_bp = Blueprint("v1_bp", __name__)
 v1_bp.register_blueprint(genel_bp(MagazaModeli, 'magaza_bp'), url_prefix="/magaza")
 v1_bp.register_blueprint(genel_bp(MusteriModeli, 'musteri_bp'), url_prefix="/musteri")

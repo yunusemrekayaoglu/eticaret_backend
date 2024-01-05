@@ -7,6 +7,14 @@ from veri import *
 
 
 def create_app():
+
+
+    """
+    Uygulama oluşturur ve blueprintleri kaydeder.
+    :return:
+
+
+    """
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://eticaret_user:123456@localhost:5432/eticaret"
     migrate = Migrate()

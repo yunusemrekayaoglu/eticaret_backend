@@ -6,12 +6,22 @@ from veri import db
 
 
 def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
-
     """
+    Blueprint oluşturur. Blueprint adı verilmezse genel_bp olarak oluşturur.
+    Blueprint ile veri tabanı modeli arasında ilişki kurar.
 
-    :param veri_sinifi:
-    :param bp_adi:
-    :return:
+    :param veri_sinifi: Veri tabanı modeli
+    :param bp_adi: Blueprint adı (varsayılan: 'genel_bp')
+    :type bp_adi: str
+    :return: Blueprint
+
+    **İşlevler:**
+
+    - :func:`index`: Veri tabanı modeli ile ilgili kayıtları sayfa ve kayıt sayısı parametrelerine göre getirir.
+    - :func:`ekle`: Veri tabanı modeli ile ilgili kayıt ekler.
+    - :func:`getir`: Veri tabanı modeli ile ilgili kayıt getirir.
+    - :func:`duzenle`: Veri tabanı modeli ile ilgili kayıt düzenler.
+    - :func:`sil`: Veri tabanı modeli ile ilgili kayıt siler.
     """
 
     bp = Blueprint(bp_adi, __name__)
@@ -20,6 +30,17 @@ def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
     @bp.route('/sayfa/<int:sayfa>', methods=['GET'])
     @bp.route('/sayfa/<int:sayfa>/<int:kayit_sayisi>', methods=['GET'])
     def index(sayfa: int = 1, kayit_sayisi: int = 10):
+
+        """
+        :param sayfa:
+        :param kayit_sayisi:
+        :return:
+
+        Veri tabanı modeli ile ilgili kayıtları sayfa ve kayıt sayısı parametrelerine göre getirir.
+
+
+        """
+
         sorgu = select(veri_sinifi)
 
         sorgu = sorgula(sorgu, veri_sinifi, sayfa - 1, kayit_sayisi)
@@ -32,6 +53,12 @@ def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
     @bp.route('/', methods=['POST'])
     @bp.route('', methods=['POST'])
     def ekle():
+
+        """
+        :return:
+
+        Veri tabanı modeli ile ilgili kayıt ekler.
+        """
         veri = veri_sinifi()
 
         sutunlar = [col.key for col in inspect(veri).mapper.column_attrs]
@@ -50,6 +77,15 @@ def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
 
     @bp.route('/<int:id>', methods=['GET'])
     def getir(id: int):
+
+        """
+
+        :param id:
+        :return:
+
+
+        Veri tabanı modeli ile ilgili kayıt getirir.
+        """
         sorgu = select(veri_sinifi).where(veri_sinifi.id == id)
 
         cevap = db.session.scalars(sorgu).one()
@@ -58,6 +94,14 @@ def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
 
     @bp.route("/<int:id>", methods=["PUT", "PATCH"])
     def duzenle(id: int):
+
+        """
+
+        :param id:
+        :return:
+
+        Veri tabanı modeli ile ilgili kayıt düzenler.
+        """
         sorgu = select(veri_sinifi).where(veri_sinifi.id == id)
         veri = db.session.scalars(sorgu).one()
 
@@ -74,6 +118,15 @@ def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
 
     @bp.route("/<int:id>", methods=["DELETE"])
     def sil(id: int):
+
+        """
+
+        :param id:
+        :return:
+
+
+        Veri tabanı modeli ile ilgili kayıt siler.
+        """
         sorgu = select(veri_sinifi).where(veri_sinifi.id == id)
         veri = db.session.scalars(sorgu).one()
 
