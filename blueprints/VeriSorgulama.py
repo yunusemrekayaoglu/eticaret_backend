@@ -71,9 +71,9 @@ Kullanılan Kısaltmalar ve Anlamları
 
     """
 
-
-    sorgu = sorgu.limit(kayit_sayisi)
-    sorgu = sorgu.offset(sayfa_no * kayit_sayisi)
+    if sayfa_no >= 0:
+        sorgu = sorgu.limit(kayit_sayisi)
+        sorgu = sorgu.offset(sayfa_no * kayit_sayisi)
 
 
     siralama_alanlari = request.args.getlist('sirala')

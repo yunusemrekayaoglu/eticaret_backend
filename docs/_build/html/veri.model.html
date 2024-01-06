@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>veri.model package &mdash; eticaret_backend  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            eticaret_backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">veri.model package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-veri.model.MagazaModeli">veri.model.MagazaModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.MagazaModeli.MagazaModeli"><code class="docutils literal notranslate"><span class="pre">MagazaModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.MagazaModeli.MagazaModeli.adi"><code class="docutils literal notranslate"><span class="pre">MagazaModeli.adi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MagazaModeli.MagazaModeli.adres"><code class="docutils literal notranslate"><span class="pre">MagazaModeli.adres</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MagazaModeli.MagazaModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">MagazaModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MagazaModeli.MagazaModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">MagazaModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MagazaModeli.MagazaModeli.id"><code class="docutils literal notranslate"><span class="pre">MagazaModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MagazaModeli.MagazaModeli.telefon"><code class="docutils literal notranslate"><span class="pre">MagazaModeli.telefon</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MagazaModeli.MagazaModeli.yetkili"><code class="docutils literal notranslate"><span class="pre">MagazaModeli.yetkili</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.MusteriModeli">veri.model.MusteriModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli"><code class="docutils literal notranslate"><span class="pre">MusteriModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli.ad"><code class="docutils literal notranslate"><span class="pre">MusteriModeli.ad</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli.adres"><code class="docutils literal notranslate"><span class="pre">MusteriModeli.adres</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">MusteriModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli.fotograf"><code class="docutils literal notranslate"><span class="pre">MusteriModeli.fotograf</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">MusteriModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli.id"><code class="docutils literal notranslate"><span class="pre">MusteriModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli.soyad"><code class="docutils literal notranslate"><span class="pre">MusteriModeli.soyad</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.MusteriModeli.MusteriModeli.telefon"><code class="docutils literal notranslate"><span class="pre">MusteriModeli.telefon</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.SiparisModeli">veri.model.SiparisModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.SiparisModeli.SiparisModeli"><code class="docutils literal notranslate"><span class="pre">SiparisModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.SiparisModeli.SiparisModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">SiparisModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisModeli.SiparisModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">SiparisModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisModeli.SiparisModeli.id"><code class="docutils literal notranslate"><span class="pre">SiparisModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisModeli.SiparisModeli.magaza_id"><code class="docutils literal notranslate"><span class="pre">SiparisModeli.magaza_id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisModeli.SiparisModeli.musteri_id"><code class="docutils literal notranslate"><span class="pre">SiparisModeli.musteri_id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisModeli.SiparisModeli.tarih"><code class="docutils literal notranslate"><span class="pre">SiparisModeli.tarih</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.SiparisUrunModeli">veri.model.SiparisUrunModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli"><code class="docutils literal notranslate"><span class="pre">SiparisUrunModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.adet"><code class="docutils literal notranslate"><span class="pre">SiparisUrunModeli.adet</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.birim_fiyat"><code class="docutils literal notranslate"><span class="pre">SiparisUrunModeli.birim_fiyat</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">SiparisUrunModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">SiparisUrunModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.id"><code class="docutils literal notranslate"><span class="pre">SiparisUrunModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.siparis_id"><code class="docutils literal notranslate"><span class="pre">SiparisUrunModeli.siparis_id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.urun_id"><code class="docutils literal notranslate"><span class="pre">SiparisUrunModeli.urun_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.TemelVeriSinifi">veri.model.TemelVeriSinifi module</a><ul>
+<li><a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">TemelVeriSinifi.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">TemelVeriSinifi.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.id"><code class="docutils literal notranslate"><span class="pre">TemelVeriSinifi.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.metadata"><code class="docutils literal notranslate"><span class="pre">TemelVeriSinifi.metadata</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.registry"><code class="docutils literal notranslate"><span class="pre">TemelVeriSinifi.registry</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.to_dict"><code class="docutils literal notranslate"><span class="pre">TemelVeriSinifi.to_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.UrunAlisModeli">veri.model.UrunAlisModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli"><code class="docutils literal notranslate"><span class="pre">UrunAlisModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli.birim_fiyat"><code class="docutils literal notranslate"><span class="pre">UrunAlisModeli.birim_fiyat</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunAlisModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunAlisModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli.id"><code class="docutils literal notranslate"><span class="pre">UrunAlisModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli.miktar"><code class="docutils literal notranslate"><span class="pre">UrunAlisModeli.miktar</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli.tarih"><code class="docutils literal notranslate"><span class="pre">UrunAlisModeli.tarih</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli.urun_id"><code class="docutils literal notranslate"><span class="pre">UrunAlisModeli.urun_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.UrunKategoriModeli">veri.model.UrunKategoriModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli"><code class="docutils literal notranslate"><span class="pre">UrunKategoriModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunKategoriModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunKategoriModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli.id"><code class="docutils literal notranslate"><span class="pre">UrunKategoriModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli.kategori"><code class="docutils literal notranslate"><span class="pre">UrunKategoriModeli.kategori</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.UrunModeli">veri.model.UrunModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli"><code class="docutils literal notranslate"><span class="pre">UrunModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.aciklama"><code class="docutils literal notranslate"><span class="pre">UrunModeli.aciklama</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.adi"><code class="docutils literal notranslate"><span class="pre">UrunModeli.adi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.alislar"><code class="docutils literal notranslate"><span class="pre">UrunModeli.alislar</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.fiyati"><code class="docutils literal notranslate"><span class="pre">UrunModeli.fiyati</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.fotograf"><code class="docutils literal notranslate"><span class="pre">UrunModeli.fotograf</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.id"><code class="docutils literal notranslate"><span class="pre">UrunModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.satislar"><code class="docutils literal notranslate"><span class="pre">UrunModeli.satislar</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.stok_miktari"><code class="docutils literal notranslate"><span class="pre">UrunModeli.stok_miktari</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunModeli.UrunModeli.urun_kodu"><code class="docutils literal notranslate"><span class="pre">UrunModeli.urun_kodu</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.UrunOzellikleriModeli">veri.model.UrunOzellikleriModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli"><code class="docutils literal notranslate"><span class="pre">UrunOzellikleriModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.deger"><code class="docutils literal notranslate"><span class="pre">UrunOzellikleriModeli.deger</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunOzellikleriModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunOzellikleriModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.id"><code class="docutils literal notranslate"><span class="pre">UrunOzellikleriModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.ozellik"><code class="docutils literal notranslate"><span class="pre">UrunOzellikleriModeli.ozellik</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.urun_id"><code class="docutils literal notranslate"><span class="pre">UrunOzellikleriModeli.urun_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.UrunSatisModeli">veri.model.UrunSatisModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli"><code class="docutils literal notranslate"><span class="pre">UrunSatisModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli.birim_fiyat"><code class="docutils literal notranslate"><span class="pre">UrunSatisModeli.birim_fiyat</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunSatisModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunSatisModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli.id"><code class="docutils literal notranslate"><span class="pre">UrunSatisModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli.miktar"><code class="docutils literal notranslate"><span class="pre">UrunSatisModeli.miktar</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli.tarih"><code class="docutils literal notranslate"><span class="pre">UrunSatisModeli.tarih</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli.urun_id"><code class="docutils literal notranslate"><span class="pre">UrunSatisModeli.urun_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model.UrunYorumModeli">veri.model.UrunYorumModeli module</a><ul>
+<li><a class="reference internal" href="#veri.model.UrunYorumModeli.UrunYorumModeli"><code class="docutils literal notranslate"><span class="pre">UrunYorumModeli</span></code></a><ul>
+<li><a class="reference internal" href="#veri.model.UrunYorumModeli.UrunYorumModeli.eklenme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunYorumModeli.eklenme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunYorumModeli.UrunYorumModeli.guncelleme_tarihi"><code class="docutils literal notranslate"><span class="pre">UrunYorumModeli.guncelleme_tarihi</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunYorumModeli.UrunYorumModeli.id"><code class="docutils literal notranslate"><span class="pre">UrunYorumModeli.id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunYorumModeli.UrunYorumModeli.puan"><code class="docutils literal notranslate"><span class="pre">UrunYorumModeli.puan</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunYorumModeli.UrunYorumModeli.siparis_id"><code class="docutils literal notranslate"><span class="pre">UrunYorumModeli.siparis_id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunYorumModeli.UrunYorumModeli.urun_id"><code class="docutils literal notranslate"><span class="pre">UrunYorumModeli.urun_id</span></code></a></li>
+<li><a class="reference internal" href="#veri.model.UrunYorumModeli.UrunYorumModeli.yorum"><code class="docutils literal notranslate"><span class="pre">UrunYorumModeli.yorum</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-veri.model">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">eticaret_backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">veri.model package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/veri.model.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="veri-model-package">
+<h1>veri.model package<a class="headerlink" href="#veri-model-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-veri.model.MagazaModeli">
+<span id="veri-model-magazamodeli-module"></span><h2>veri.model.MagazaModeli module<a class="headerlink" href="#module-veri.model.MagazaModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.MagazaModeli.MagazaModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.MagazaModeli.</span></span><span class="sig-name descname"><span class="pre">MagazaModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/MagazaModeli.html#MagazaModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.MagazaModeli.MagazaModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Mağaza modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “magaza”</p></li>
+<li><p><strong>adi</strong> – Mağaza adı</p></li>
+<li><p><strong>adres</strong> – Mağaza adresi</p></li>
+<li><p><strong>telefon</strong> – Mağaza telefon numarası</p></li>
+<li><p><strong>yetkili</strong> – Mağaza yetkilisi</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MagazaModeli.MagazaModeli.adi">
+<span class="sig-name descname"><span class="pre">adi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MagazaModeli.MagazaModeli.adi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MagazaModeli.MagazaModeli.adres">
+<span class="sig-name descname"><span class="pre">adres</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MagazaModeli.MagazaModeli.adres" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MagazaModeli.MagazaModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MagazaModeli.MagazaModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MagazaModeli.MagazaModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MagazaModeli.MagazaModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MagazaModeli.MagazaModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MagazaModeli.MagazaModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MagazaModeli.MagazaModeli.telefon">
+<span class="sig-name descname"><span class="pre">telefon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MagazaModeli.MagazaModeli.telefon" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MagazaModeli.MagazaModeli.yetkili">
+<span class="sig-name descname"><span class="pre">yetkili</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MagazaModeli.MagazaModeli.yetkili" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.MusteriModeli">
+<span id="veri-model-musterimodeli-module"></span><h2>veri.model.MusteriModeli module<a class="headerlink" href="#module-veri.model.MusteriModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.MusteriModeli.</span></span><span class="sig-name descname"><span class="pre">MusteriModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/MusteriModeli.html#MusteriModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Müşteri modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “musteri”</p></li>
+<li><p><strong>ad</strong> – Müşteri adı</p></li>
+<li><p><strong>soyad</strong> – Müşteri soyadı</p></li>
+<li><p><strong>telefon</strong> – Müşteri telefon numarası</p></li>
+<li><p><strong>adres</strong> – Müşteri adresi</p></li>
+<li><p><strong>fotograf</strong> – Müşteri fotoğrafı</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli.ad">
+<span class="sig-name descname"><span class="pre">ad</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli.ad" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli.adres">
+<span class="sig-name descname"><span class="pre">adres</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli.adres" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli.fotograf">
+<span class="sig-name descname"><span class="pre">fotograf</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli.fotograf" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli.soyad">
+<span class="sig-name descname"><span class="pre">soyad</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli.soyad" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.MusteriModeli.MusteriModeli.telefon">
+<span class="sig-name descname"><span class="pre">telefon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.MusteriModeli.MusteriModeli.telefon" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.SiparisModeli">
+<span id="veri-model-siparismodeli-module"></span><h2>veri.model.SiparisModeli module<a class="headerlink" href="#module-veri.model.SiparisModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.SiparisModeli.SiparisModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.SiparisModeli.</span></span><span class="sig-name descname"><span class="pre">SiparisModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/SiparisModeli.html#SiparisModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.SiparisModeli.SiparisModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Sipariş modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “siparis”</p></li>
+<li><p><strong>tarih</strong> – Sipariş tarihi</p></li>
+<li><p><strong>magaza_id</strong> – Siparişin bağlı olduğu mağaza ID’si</p></li>
+<li><p><strong>musteri_id</strong> – Siparişin bağlı olduğu müşteri ID’si</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisModeli.SiparisModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisModeli.SiparisModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisModeli.SiparisModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisModeli.SiparisModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisModeli.SiparisModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisModeli.SiparisModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisModeli.SiparisModeli.magaza_id">
+<span class="sig-name descname"><span class="pre">magaza_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisModeli.SiparisModeli.magaza_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisModeli.SiparisModeli.musteri_id">
+<span class="sig-name descname"><span class="pre">musteri_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisModeli.SiparisModeli.musteri_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisModeli.SiparisModeli.tarih">
+<span class="sig-name descname"><span class="pre">tarih</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisModeli.SiparisModeli.tarih" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.SiparisUrunModeli">
+<span id="veri-model-siparisurunmodeli-module"></span><h2>veri.model.SiparisUrunModeli module<a class="headerlink" href="#module-veri.model.SiparisUrunModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.SiparisUrunModeli.SiparisUrunModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.SiparisUrunModeli.</span></span><span class="sig-name descname"><span class="pre">SiparisUrunModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/SiparisUrunModeli.html#SiparisUrunModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Sipariş Ürün modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “siparis_urun”</p></li>
+<li><p><strong>siparis_id</strong> – Ürünün bağlı olduğu sipariş ID’si</p></li>
+<li><p><strong>urun_id</strong> – Ürün ID’si</p></li>
+<li><p><strong>adet</strong> – Ürün adedi</p></li>
+<li><p><strong>birim_fiyat</strong> – Ürün birim fiyatı</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisUrunModeli.SiparisUrunModeli.adet">
+<span class="sig-name descname"><span class="pre">adet</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.adet" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisUrunModeli.SiparisUrunModeli.birim_fiyat">
+<span class="sig-name descname"><span class="pre">birim_fiyat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.birim_fiyat" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisUrunModeli.SiparisUrunModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisUrunModeli.SiparisUrunModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisUrunModeli.SiparisUrunModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisUrunModeli.SiparisUrunModeli.siparis_id">
+<span class="sig-name descname"><span class="pre">siparis_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.siparis_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.SiparisUrunModeli.SiparisUrunModeli.urun_id">
+<span class="sig-name descname"><span class="pre">urun_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.SiparisUrunModeli.SiparisUrunModeli.urun_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.TemelVeriSinifi">
+<span id="veri-model-temelverisinifi-module"></span><h2>veri.model.TemelVeriSinifi module<a class="headerlink" href="#module-veri.model.TemelVeriSinifi" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.TemelVeriSinifi.TemelVeriSinifi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.TemelVeriSinifi.</span></span><span class="sig-name descname"><span class="pre">TemelVeriSinifi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/TemelVeriSinifi.html#TemelVeriSinifi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclarativeBase</span></code></p>
+<p>Temel Veri Sınıfı.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – Veri nesnesinin benzersiz kimliği (primary key)</p></li>
+<li><p><strong>eklenme_tarihi</strong> – Veri nesnesinin eklenme tarihi</p></li>
+<li><p><strong>guncelleme_tarihi</strong> – Veri nesnesinin son güncellenme tarihi</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.TemelVeriSinifi.TemelVeriSinifi.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sqlalchemy.orm.properties.MappedColumn</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.TemelVeriSinifi.TemelVeriSinifi.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sqlalchemy.orm.properties.MappedColumn</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.TemelVeriSinifi.TemelVeriSinifi.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sqlalchemy.orm.properties.MappedColumn</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.TemelVeriSinifi.TemelVeriSinifi.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">MetaData</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">MetaData()</span></em><a class="headerlink" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.metadata" title="Link to this definition"></a></dt>
+<dd><p>Refers to the <code class="xref py py-class docutils literal notranslate"><span class="pre">_schema.MetaData</span></code> collection that will be used
+for new <code class="xref py py-class docutils literal notranslate"><span class="pre">_schema.Table</span></code> objects.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><span class="xref std std-ref">orm_declarative_metadata</span></p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.TemelVeriSinifi.TemelVeriSinifi.registry">
+<span class="sig-name descname"><span class="pre">registry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">_RegistryType</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sqlalchemy.orm.decl_api.registry</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.registry" title="Link to this definition"></a></dt>
+<dd><p>Refers to the <code class="xref py py-class docutils literal notranslate"><span class="pre">_orm.registry</span></code> in use where new
+<code class="xref py py-class docutils literal notranslate"><span class="pre">_orm.Mapper</span></code> objects will be associated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="veri.model.TemelVeriSinifi.TemelVeriSinifi.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/veri/model/TemelVeriSinifi.html#TemelVeriSinifi.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi.to_dict" title="Link to this definition"></a></dt>
+<dd><p>Veriyi bir sözlük haline getirir.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Veriyi temsil eden sözlük</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.UrunAlisModeli">
+<span id="veri-model-urunalismodeli-module"></span><h2>veri.model.UrunAlisModeli module<a class="headerlink" href="#module-veri.model.UrunAlisModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.UrunAlisModeli.UrunAlisModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.UrunAlisModeli.</span></span><span class="sig-name descname"><span class="pre">UrunAlisModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/UrunAlisModeli.html#UrunAlisModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.UrunAlisModeli.UrunAlisModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Ürün Alış Modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “alis_hareketleri”</p></li>
+<li><p><strong>urun_id</strong> – Alış hareketinin bağlı olduğu ürün ID’si</p></li>
+<li><p><strong>miktar</strong> – Alınan ürün miktarı</p></li>
+<li><p><strong>birim_fiyat</strong> – Birim fiyat</p></li>
+<li><p><strong>tarih</strong> – Alış tarihi</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunAlisModeli.UrunAlisModeli.birim_fiyat">
+<span class="sig-name descname"><span class="pre">birim_fiyat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunAlisModeli.UrunAlisModeli.birim_fiyat" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunAlisModeli.UrunAlisModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunAlisModeli.UrunAlisModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunAlisModeli.UrunAlisModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunAlisModeli.UrunAlisModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunAlisModeli.UrunAlisModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunAlisModeli.UrunAlisModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunAlisModeli.UrunAlisModeli.miktar">
+<span class="sig-name descname"><span class="pre">miktar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunAlisModeli.UrunAlisModeli.miktar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunAlisModeli.UrunAlisModeli.tarih">
+<span class="sig-name descname"><span class="pre">tarih</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">date</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunAlisModeli.UrunAlisModeli.tarih" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunAlisModeli.UrunAlisModeli.urun_id">
+<span class="sig-name descname"><span class="pre">urun_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunAlisModeli.UrunAlisModeli.urun_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.UrunKategoriModeli">
+<span id="veri-model-urunkategorimodeli-module"></span><h2>veri.model.UrunKategoriModeli module<a class="headerlink" href="#module-veri.model.UrunKategoriModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.UrunKategoriModeli.UrunKategoriModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.UrunKategoriModeli.</span></span><span class="sig-name descname"><span class="pre">UrunKategoriModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/UrunKategoriModeli.html#UrunKategoriModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Ürün Kategori Modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “kategori”</p></li>
+<li><p><strong>kategori</strong> – Ürün kategorisi</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunKategoriModeli.UrunKategoriModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunKategoriModeli.UrunKategoriModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunKategoriModeli.UrunKategoriModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunKategoriModeli.UrunKategoriModeli.kategori">
+<span class="sig-name descname"><span class="pre">kategori</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunKategoriModeli.UrunKategoriModeli.kategori" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.UrunModeli">
+<span id="veri-model-urunmodeli-module"></span><h2>veri.model.UrunModeli module<a class="headerlink" href="#module-veri.model.UrunModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.UrunModeli.</span></span><span class="sig-name descname"><span class="pre">UrunModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/UrunModeli.html#UrunModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Ürün Modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “urun”</p></li>
+<li><p><strong>urun_kodu</strong> – Ürün kodu</p></li>
+<li><p><strong>adi</strong> – Ürün adı</p></li>
+<li><p><strong>fiyati</strong> – Ürün fiyatı</p></li>
+<li><p><strong>aciklama</strong> – Ürün açıklaması</p></li>
+<li><p><strong>fotograf</strong> – Ürün fotoğrafı</p></li>
+<li><p><strong>alislar</strong> – Ürünle ilgili alış hareketleri</p></li>
+<li><p><strong>satislar</strong> – Ürünle ilgili satış hareketleri</p></li>
+</ul>
+</dd>
+<dt class="field-even">Property stok_miktari<span class="colon">:</span></dt>
+<dd class="field-even"><p>Ürünün stok miktarı (alımlardan satışlar çıkartılarak hesaplanır)</p>
+</dd>
+<dt class="field-odd">Rtype stok_miktari<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.aciklama">
+<span class="sig-name descname"><span class="pre">aciklama</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.aciklama" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.adi">
+<span class="sig-name descname"><span class="pre">adi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.adi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.alislar">
+<span class="sig-name descname"><span class="pre">alislar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#veri.model.UrunAlisModeli.UrunAlisModeli" title="veri.model.UrunAlisModeli.UrunAlisModeli"><span class="pre">UrunAlisModeli</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.alislar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.fiyati">
+<span class="sig-name descname"><span class="pre">fiyati</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.fiyati" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.fotograf">
+<span class="sig-name descname"><span class="pre">fotograf</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.fotograf" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.satislar">
+<span class="sig-name descname"><span class="pre">satislar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#veri.model.UrunSatisModeli.UrunSatisModeli" title="veri.model.UrunSatisModeli.UrunSatisModeli"><span class="pre">UrunSatisModeli</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.satislar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.stok_miktari">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stok_miktari</span></span><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.stok_miktari" title="Link to this definition"></a></dt>
+<dd><p>Ürünün stok miktarını hesaplar.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ürünün stok miktarı</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunModeli.UrunModeli.urun_kodu">
+<span class="sig-name descname"><span class="pre">urun_kodu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunModeli.UrunModeli.urun_kodu" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.UrunOzellikleriModeli">
+<span id="veri-model-urunozelliklerimodeli-module"></span><h2>veri.model.UrunOzellikleriModeli module<a class="headerlink" href="#module-veri.model.UrunOzellikleriModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.UrunOzellikleriModeli.</span></span><span class="sig-name descname"><span class="pre">UrunOzellikleriModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/UrunOzellikleriModeli.html#UrunOzellikleriModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Ürün Özellikleri Modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “urun_ozellik”</p></li>
+<li><p><strong>urun_id</strong> – Ürün özelliğinin bağlı olduğu ürün ID’si</p></li>
+<li><p><strong>ozellik</strong> – Ürün özelliği</p></li>
+<li><p><strong>deger</strong> – Ürün özelliği değeri (alış ile satış arasındaki kâr)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.deger">
+<span class="sig-name descname"><span class="pre">deger</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.deger" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.ozellik">
+<span class="sig-name descname"><span class="pre">ozellik</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.ozellik" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.urun_id">
+<span class="sig-name descname"><span class="pre">urun_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunOzellikleriModeli.UrunOzellikleriModeli.urun_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.UrunSatisModeli">
+<span id="veri-model-urunsatismodeli-module"></span><h2>veri.model.UrunSatisModeli module<a class="headerlink" href="#module-veri.model.UrunSatisModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.UrunSatisModeli.UrunSatisModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.UrunSatisModeli.</span></span><span class="sig-name descname"><span class="pre">UrunSatisModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/UrunSatisModeli.html#UrunSatisModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.UrunSatisModeli.UrunSatisModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Ürün Satış Modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “satis_modeli”</p></li>
+<li><p><strong>urun_id</strong> – Satışın bağlı olduğu ürün ID’si</p></li>
+<li><p><strong>miktar</strong> – Satılan ürün miktarı</p></li>
+<li><p><strong>birim_fiyat</strong> – Birim fiyat</p></li>
+<li><p><strong>tarih</strong> – Satış tarihi</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunSatisModeli.UrunSatisModeli.birim_fiyat">
+<span class="sig-name descname"><span class="pre">birim_fiyat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunSatisModeli.UrunSatisModeli.birim_fiyat" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunSatisModeli.UrunSatisModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunSatisModeli.UrunSatisModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunSatisModeli.UrunSatisModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunSatisModeli.UrunSatisModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunSatisModeli.UrunSatisModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunSatisModeli.UrunSatisModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunSatisModeli.UrunSatisModeli.miktar">
+<span class="sig-name descname"><span class="pre">miktar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunSatisModeli.UrunSatisModeli.miktar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunSatisModeli.UrunSatisModeli.tarih">
+<span class="sig-name descname"><span class="pre">tarih</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">date</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunSatisModeli.UrunSatisModeli.tarih" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunSatisModeli.UrunSatisModeli.urun_id">
+<span class="sig-name descname"><span class="pre">urun_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunSatisModeli.UrunSatisModeli.urun_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model.UrunYorumModeli">
+<span id="veri-model-urunyorummodeli-module"></span><h2>veri.model.UrunYorumModeli module<a class="headerlink" href="#module-veri.model.UrunYorumModeli" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="veri.model.UrunYorumModeli.UrunYorumModeli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">veri.model.UrunYorumModeli.</span></span><span class="sig-name descname"><span class="pre">UrunYorumModeli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/veri/model/UrunYorumModeli.html#UrunYorumModeli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#veri.model.UrunYorumModeli.UrunYorumModeli" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#veri.model.TemelVeriSinifi.TemelVeriSinifi" title="veri.model.TemelVeriSinifi.TemelVeriSinifi"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemelVeriSinifi</span></code></a></p>
+<p>Ürün Yorum Modeli.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__tablename__</strong> – Veritabanındaki tablo adı: “yorum”</p></li>
+<li><p><strong>siparis_id</strong> – Yorumun bağlı olduğu sipariş ID’si</p></li>
+<li><p><strong>urun_id</strong> – Yorumun bağlı olduğu ürün ID’si</p></li>
+<li><p><strong>yorum</strong> – Yorum metni</p></li>
+<li><p><strong>puan</strong> – Yorumun puanı</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunYorumModeli.UrunYorumModeli.eklenme_tarihi">
+<span class="sig-name descname"><span class="pre">eklenme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunYorumModeli.UrunYorumModeli.eklenme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunYorumModeli.UrunYorumModeli.guncelleme_tarihi">
+<span class="sig-name descname"><span class="pre">guncelleme_tarihi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunYorumModeli.UrunYorumModeli.guncelleme_tarihi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunYorumModeli.UrunYorumModeli.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunYorumModeli.UrunYorumModeli.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunYorumModeli.UrunYorumModeli.puan">
+<span class="sig-name descname"><span class="pre">puan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunYorumModeli.UrunYorumModeli.puan" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunYorumModeli.UrunYorumModeli.siparis_id">
+<span class="sig-name descname"><span class="pre">siparis_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunYorumModeli.UrunYorumModeli.siparis_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunYorumModeli.UrunYorumModeli.urun_id">
+<span class="sig-name descname"><span class="pre">urun_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunYorumModeli.UrunYorumModeli.urun_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="veri.model.UrunYorumModeli.UrunYorumModeli.yorum">
+<span class="sig-name descname"><span class="pre">yorum</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapped</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#veri.model.UrunYorumModeli.UrunYorumModeli.yorum" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-veri.model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-veri.model" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Yunus Emre KAYAOGLU.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

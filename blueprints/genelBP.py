@@ -1,5 +1,5 @@
 from flask import Blueprint, request, abort
-from sqlalchemy import select, inspect
+from sqlalchemy import select, inspect, func
 
 from blueprints.VeriSorgulama import sorgula
 from veri import db
@@ -43,12 +43,27 @@ def genel_bp(veri_sinifi:type, bp_adi: str = 'genel_bp'):
 
         sorgu = select(veri_sinifi)
 
+        sayfa = max(0, sayfa
+                    )
+
         sorgu = sorgula(sorgu, veri_sinifi, sayfa - 1, kayit_sayisi)
 
 
         cevap = db.session.scalars(sorgu).all()
 
         return [veri_sinifi.to_dict() for veri_sinifi in cevap]
+
+    @bp.route('/sayfa_sayisi', methods=['GET'])
+    @bp.route('/sayfa_sayisi/<int:kayit_sayisi>', methods=['GET'])
+    def sayfa_sayisi(kayit_sayisi:int = 10):
+        sorgu = select(func.count('*')).select_from(veri_sinifi)
+        sorgu = sorgula(sorgu, veri_sinifi, - 1, kayit_sayisi)
+        cevap = db.session.scalars(sorgu).all()
+        kalan = cevap[0] % kayit_sayisi
+        sayfa_sayisi = cevap[0] // kayit_sayisi
+        if kalan > 0:
+            sayfa_sayisi += 1
+        return {'sayfa_sayisi': sayfa_sayisi}
 
     @bp.route('/', methods=['POST'])
     @bp.route('', methods=['POST'])
